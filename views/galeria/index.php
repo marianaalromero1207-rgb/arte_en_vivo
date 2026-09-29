@@ -82,6 +82,37 @@
     </div>
 </div>
 
+<!-- Pie del Modal -->
+<div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; width: 100%;">
+    <span id="modal-precio" class="precio" style="font-size: 1.5rem; font-weight: bold; color: #2ecc71;">$0.00</span>
+    
+    <div style="display: flex; gap: 0.8rem;">
+        <button onclick="cerrarModal()" style="background: #e74c3c; color: #fff; padding: 0.6rem 1.2rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+            Cerrar / Volver
+        </button>
+
+        <!-- AGREGAR ESTE BOTÓN -->
+        <a id="modal-btn-comprar" href="#" style="background: #2ecc71; color: #fff; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block;">
+            🛒 Comprar Obra
+        </a>
+    </div>
+</div>
+    
+    <div style="display: flex; gap: 0.8rem;">
+        <button onclick="cerrarModal()" style="background: #444; color: #fff; padding: 0.6rem 1.2rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+            Cerrar / Volver
+        </button>
+        
+        <!-- Botón para iniciar el proceso de compra -->
+        <a href="index.php?c=compra&a=checkout&id=<?php echo $obra['id']; ?>" 
+           style="background: #2ecc71; color: #fff; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.2s;"
+           onmouseover="this.style.background='#27ae60'" 
+           onmouseout="this.style.background='#2ecc71'">
+            🛒 Comprar Obra
+        </a>
+    </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 

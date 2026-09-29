@@ -42,10 +42,18 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <header class="header-nav">
     <a href="index.php" class="logo">ArteEnVivo</a>
-    <nav class="nav-links">
-        <a href="index.php?c=home&a=index">Inicio</a>
-        <a href="index.php?c=galeria&a=index">Explorar Galería</a>
-
+    <nav style="display: flex; gap: 1rem; align-items: center;">
+    <a href="index.php?c=home&a=index" style="color: #fff; text-decoration: none;">Inicio</a>
+    <a href="index.php?c=galeria&a=index" style="color: #fff; text-decoration: none;">Explorar Galería</a>
+    
+    <!-- Enlaces del CRUD restaurados -->
+    <a href="index.php?c=artista&a=index" style="background: #ff3b5c; color: #fff; padding: 0.4rem 0.8rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+        🧑‍🎨 CRUD Artistas
+    </a>
+    <a href="index.php?c=obra&a=index" style="background: #ff3b5c; color: #fff; padding: 0.4rem 0.8rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+        🖼️ CRUD Obras
+    </a>
+</nav>
         <?php if (isset($_SESSION['usuario'])): ?>
             <?php $rol = $_SESSION['usuario']['tipo']; ?>
 
